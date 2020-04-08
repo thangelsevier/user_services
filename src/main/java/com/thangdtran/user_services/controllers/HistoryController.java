@@ -40,7 +40,7 @@ public class HistoryController {
         historyObject.put("history_id", historyId);
 
         // get product info by feign
-        historyObject.put("product", productFeignClient.getProductInfo("1"));
+        historyObject.put("product", new JSONObject(productFeignClient.getProductInfo("1")));
         historiesObject[0] = historyObject;
 
         // response
